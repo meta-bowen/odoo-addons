@@ -1,0 +1,17 @@
+id,name,model_id:id,group_id:id,perm_read,perm_write,perm_create,perm_unlink
+access_juantong_user,JuantongUser,model_shangjia,juantong_group_user,1,0,1,0
+access_juantong_manager,JuantongManager,model_shangjia,juantong_group_manager,1,1,1,1
+
+access_city_user,CityUser,model_res_country_city,juantong_group_user,1,0,0,0
+access_city_manager,CityManager,model_res_country_city,juantong_group_manager,1,1,1,1
+
+access_district_user,DistrictUser,model_res_country_district,juantong_group_user,1,0,0,0
+access_district_manager,DistrictManager,model_res_country_district,juantong_group_manager,1,1,1,1
+
+access_activity_user,ActivityUser,model_activity,activity_group_user,1,0,1,0
+access_activity_manager,ActivityManager,model_activity,activity_group_manager,1,1,1,1
+
+access_indent_user,IntentUser,model_indent,indent_group_user,1,0,0,0
+access_indent_manager,IndentManager,model_indent,indent_group_manager,1,1,1,1
+
+

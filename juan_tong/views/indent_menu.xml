@@ -1,0 +1,13 @@
+<?xml version='1.0'?>
+<odoo>
+	<act_window id="action_juantong_indent"
+			name="订单管理"
+			res_model="indent"	
+			view_mode="tree,form"
+		/>
+	<menuitem id="menu_juantong_indent"
+			name="订单管理系统"
+			parent="menu_juantong"
+			action="action_juantong_indent"
+		/>
+</odoo>

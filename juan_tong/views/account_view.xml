@@ -1,0 +1,57 @@
+<?xml version="1.0"?>
+<odoo>
+	<record id="view_form_account" model="ir.ui.view">
+		<field name="name">Account From</field>
+		<field name="model">res.users</field>
+		<field name="arch" type="xml">
+			<form string="Account">
+				<sheet>
+					<group>
+						<field name="login" string="账号"/>
+						<field name="name" string="真实姓名"/>
+						<field name="function" string="岗位"/>
+						<field name="active" string="账号状态"/>
+						<field name="password" string="密码"/>
+						<field name="groups_id" string="权限"/>
+
+					</group>
+				</sheet>
+			</form>
+		</field>
+	</record>
+	
+
+	
+	<record id="view_tree_account" model="ir.ui.view">
+		<field name="name">Account List</field>
+		<field name="model">res.users</field>
+		<field name="arch" type="xml">
+			<tree>
+				<field name="id" string="序号"/>
+				<field name="login" string="账号"/>
+				<field name="name" string="真实姓名"/>
+				<field name="function" string="岗位"/>
+				<field name="active" string="账号状态"/>
+				
+				<field name="create_date" string="注册时间"/>
+				<field name="login_date" string="最后登录时间"/>
+			</tree>
+		</field>
+	</record>
+	
+	<record id="action_form_view1" model="ir.actions.act_window.view">
+		<field name="sequence" eval="2"/>
+		<field name="view_mode">form</field>
+		<field name="view_id" ref="view_form_account"/>
+		<field name="act_window_id" ref="action_account"/>
+	</record>
+	
+	<record id="action_tree_view1" model="ir.actions.act_window.view">
+		<field name="sequence" eval="1"/>
+		<field name="view_mode">tree</field>
+		<field name="view_id" ref="view_tree_account"/>
+		<field name="act_window_id" ref="action_account"/>
+	</record>
+	
+</odoo>
+			

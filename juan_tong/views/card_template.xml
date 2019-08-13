@@ -1,0 +1,47 @@
+<?xml version="1.0"?>
+<odoo>
+    <template id="card_assets" name="share_web_assets" inherit_id="web.assets_frontend">
+        <xpath expr="." position="inside">
+			<link rel="stylesheet" type="text/css"
+				  href="/juan_tong/static/src/css/card.css"/>
+            <script type="text/javascript"
+                                src="/juan_tong/static/src/js/jiekou.js"/>
+            <script type="text/javascript"
+					src="/juan_tong/static/src/js/controller.js"/>
+
+        </xpath>
+    </template>
+
+
+    <template id="card_web" name="Card">
+        <head>
+            <t t-call-assets="web.assets_common" t-js="false"/>
+            <t t-call-assets="juan_tong.card_assets" t-js="false"/>
+            <t t-call-assets="web.assets_common" t-css="false"/>
+            <t t-call-assets="juan_tong.card_assets" t-css="false"/>
+            <!--t t-call-assets="web.assets_backend" t-js="false"/>
+            <t t-call-assets="web.assets_backend" t-css="false"/-->
+        </head>
+        <body>
+
+            <div>
+
+                <h2>微劵通卡劵商城</h2>
+                <div>
+                    <a href="#">返回首页</a>
+                </div>
+
+                <div>
+                    <h3>我的卡劵</h3>
+                    <span class="r">订单号</span>
+                    <span class="r">购买时间</span>
+                    <br/>
+                    <hr/>
+                </div>
+              
+            </div>
+
+        </body>
+    </template>
+
+</odoo>

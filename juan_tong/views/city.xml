@@ -1,0 +1,25 @@
+<?xml version='1.0'?>
+<odoo>
+	<record id="res_country_state_hubei" model="res.country.state">
+    	<field name="name">湖北</field>
+    	<field name="code">02</field>
+    	<field name="country_id" ref="base.cn"/>
+	</record>
+	<record id="res_country_state_gd" model="res.country.state">
+	    <field name="name">广东</field>
+	    <field name="code">03</field>
+	    <field name="country_id" ref="base.cn"/>
+	</record>
+
+	<record id="res_country_city_wuhan" model="res.country.city">
+    	<field name="name">武汉</field>
+    	<field name="code">027</field>
+    	<field name="state_id" ref="res_country_state_hubei"/>
+	</record>
+	<record id="res_country_city_jingzhou" model="res.country.city">
+    	<field name="name">荆州</field>
+    	<field name="code">0743</field>
+    	<field name="state_id" ref="res_country_state_hubei"/>
+	</record> 
+</odoo>
+

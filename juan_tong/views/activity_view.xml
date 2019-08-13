@@ -1,0 +1,58 @@
+<?xml version="1.0"?>
+<odoo>
+    <record id="view_form_activity" model="ir.ui.view">
+        <field name="name">Activity Form</field>
+        <field name="model">activity</field>
+        <field name="arch" type="xml">
+            <form string="Activity">
+            	<sheet>
+                	<group>
+                		<field name="id" string="序号"/>
+                    	<field name="name_id" />
+                    	<field name="active" />
+                    	<field name="name" />
+                    	<field name="unit_price" />
+                	<field name="original_price"/>    
+			<field name="totalcopies" />
+                    	<field name="residue_copies" />
+		
+                    	<field name="already_sales" />
+                    	<field name="card_receiveds" />
+                    	<field name="start_time" />
+                    	<field name="end_time" />
+
+                    	<field name="status" />
+                	</group>
+                </sheet>
+            </form>
+        </field>
+    </record>
+    
+    <record id="view_tree_activity" model="ir.ui.view">
+    	<field name="name">Activity List</field>
+    	<field name="model">activity</field>
+    	<field name="arch" type="xml">
+    		<tree>
+    			<field name="id" string="序号"/>
+            	<field name="name_id" />
+            	
+            	<field name="name" />
+            	<field name="unit_price" />
+            	<field name="original_price" />
+		<field name="totalcopies" sum="totalcopies"/>
+            	<field name="residue_copies" sum="residue_copies"/>
+
+            	<field name="already_sales" sum="already_sales"/>
+            	<field name="card_receiveds" sum="card_receiveds"/>
+            	<field name="start_time" />
+            	<field name="end_time" />
+            	<!--field name="OR_code" widget="url"/-->
+				<button name="button_QR_code" type="object" string="查看二维码"/>
+            	<field name="status" /> 
+            	<button name="button_change_status" type="object" string="启/停用"/>        	
+            </tree>
+        </field>
+    </record>
+
+</odoo>
+

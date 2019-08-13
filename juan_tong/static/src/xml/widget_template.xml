@@ -1,0 +1,22 @@
+<template>
+
+    <t t-call-assets="juan_tong.activity_assets" t-js="false"/>
+    <t t-call-assets="juan_tong.activity_assets" t-css="false"/>
+
+    <t t-name="share.template">
+        <div style="clear:none;">
+            <a class="o_share_a" href="https://www.baidu.com/">
+                <img class="share-icon" t-att-src="'/juan_tong/static/src/img/timg.jpg'" alt="图片加载失败"/>
+                <br/>
+                <span class="share-text">分享</span>
+            </a>
+        </div>
+    </t>
+
+    <t t-name="buy.template">
+        <div style="clear:none;">
+            <a class="o_buynow" role="button" t-attf-href="javascript:void(0);">立即购买</a>
+        </div>
+    </t>
+
+</template>

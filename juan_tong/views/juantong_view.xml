@@ -1,0 +1,81 @@
+<?xml version="1.0"?>
+<odoo>
+	    <!-- action widget调用 -->
+    <record id="action_home_page" model="ir.actions.client">
+      <field name="name">demo home</field>
+      <field name="tag">demo_home_page</field>
+    </record>
+    <record id="map_page_action" model="ir.actions.client">
+      <field name="name">map</field>
+      <field name="tag">demo_baidu_map</field>
+    </record>
+
+    <record id="view_form_juantong" model="ir.ui.view">
+        <field name="name">Juantong Form</field>
+        <field name="model">shangjia</field>
+        <field name="arch" type="xml">
+            <form string="Juantong">
+				<header>
+					<button name="button_check_test" type="object"
+					string="创建卡劵" />
+					<button name="button_check_test1" type="object"
+					string="获取token" />
+					<button name="button_check_test2" type="object"
+					string="查询卡劵" />
+					<button name="button_check_test3" type="object"
+					string="查询卡劵列表" />
+					<button name="button_check_test4" type="object"
+					string="创建货架接口" />
+					<button name="button_check_test5" type="object"
+					string="支付调试接口" />
+					<button name="button_check_test6" type="object"
+					string="获取openid接口" />
+					<button name="button_check_test7" type="object"
+					string="获取用户信息接口" />
+				</header>
+            	<sheet>
+                	<group>
+                		<field name="id" />
+						<field name="name" />
+						<field name="id_country_id" />
+				        <field name="id_state_id" />
+				        <field name="id_city" />
+				        <field name="id_district" />
+
+				       	<field name="contact" />
+				       	<field name="totalcard" />
+				      	<field name="contact_way" />
+				        <field name="totalcard_left" />
+				        <field name="card_received" />
+				        <field name="status" />  
+                	</group>
+                </sheet>
+            </form>
+        </field>
+    </record>
+    
+    <record id="view_tree_juantong" model="ir.ui.view">
+    	<field name="name">Juantong List</field>
+    	<field name="model">shangjia</field>
+    	<field name="arch" type="xml">
+    		<tree>
+    			<field name="id" />
+    			<field name="name" />
+    			<field name="id_country_id" />
+                <field name="id_state_id" />
+                <field name="id_city" />
+                <field name="id_district" />
+
+               	<field name="contact" />
+               	<field name="totalcard" sum="totalcard"/>
+              	<field name="contact_way" />
+                <field name="totalcard_left" sum="totalcard_left" />
+                <field name="card_received" sum="card_received"/>
+                <field name="status" />    
+                <button name="button_change_status" type="object" string="启/停用"/>            	
+            </tree>
+        </field>
+    </record>
+
+</odoo>
+

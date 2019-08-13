@@ -1,0 +1,21 @@
+<?xml version='1.0'?>
+<odoo>
+	<!--juan tong menu -->
+	<menuitem id="menu_juantong" name="微劵宝后台管理系统" />
+	
+	<act_window id="action_juan_tong"
+		name="商家管理"
+		res_model="shangjia"
+		view_mode="tree,form"
+	/>
+	
+	<menuitem id="menu_juan_tong"
+		name="商家管理系统"
+		parent="menu_juantong"
+		action="action_juan_tong"
+	/>
+	
+</odoo>
+
+
+

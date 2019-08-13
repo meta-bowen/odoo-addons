@@ -1,0 +1,24 @@
+<?xml version="1.0" ?>
+<odoo>
+	<record id="module_account_category" model="ir.module.category">
+		<field name="name">account</field>
+	</record>
+	
+    <!-- account User Group -->
+    <record id="account_group_user" model="res.groups">
+        <field name="name">User</field>
+        <field name="category_id" ref="module_account_category" />
+        <field name="implied_ids" eval="[(4, ref('base.group_user'))]" />
+    </record>
+    
+    <!-- account Manager Group -->
+    <record id="account_group_manager" model="res.groups">
+        <field name="name">Manager</field>
+        <field name="category_id" ref="module_account_category" />
+        <field name="implied_ids" eval="[(4, ref('account_group_user'))]" />
+        <field name="users" eval="[
+                    (4, ref('base.user_root')),
+                    (4, ref('base.user_admin'))
+                ]" />
+    </record>  
+</odoo>

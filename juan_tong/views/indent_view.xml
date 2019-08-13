@@ -1,0 +1,47 @@
+<?xml version="1.0"?>
+<odoo>
+    <record id="view_form_indent" model="ir.ui.view">
+        <field name="name">Indent Form</field>
+        <field name="model">indent</field>
+        <field name="arch" type="xml">
+            <form string="Indent">
+            	<sheet>
+                	<group>
+                		<field name="id" />
+                    	<field name="id_name_id" />
+                    	
+                    	<field name="id_activity" />
+                    	<field name="number" />
+                    	<field name="unit_price" />
+                    	<field name="username" />
+		
+                    	<field name="indent_time" />
+                    	<field name="indent_number" />
+                    	<field name="status" />
+                	</group>
+                </sheet>
+            </form>
+        </field>
+    </record>
+    
+    <record id="view_tree_indent" model="ir.ui.view">
+    	<field name="name">Indent List</field>
+    	<field name="model">indent</field>
+    	<field name="arch" type="xml">
+    		<tree>
+    			<field name="id" />
+            	<field name="id_name_id" />
+            	
+            	<field name="id_activity" />
+            	<field name="number" sum="number"/>
+            	<field name="unit_price" />
+            	<field name="username" />
+
+            	<field name="indent_time" />
+            	<field name="indent_number" />
+            	<field name="status" />       	
+            </tree>
+        </field>
+    </record>
+
+</odoo>

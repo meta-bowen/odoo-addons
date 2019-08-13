@@ -1,0 +1,261 @@
+body{
+    text-align:center;
+    margin:auto;   /*水平居中一个元素或图片*/
+    width:auto;
+    height:auto;
+    overflow-y:auto;
+    overflow-x:hidden;
+}
+div{
+    clear:both;
+}
+
+
+img{
+    width:100%;
+    background-size:cover; /*设置背景大小，使背景图像完全适应区域*/
+    background-repeat: repeat-x;  /*水平平铺*/
+
+}
+.main{
+    margin:auto;
+    width:94%;
+}
+.column1{
+    text-align:left;
+    float:left;
+    color:black;
+    font-weight:bold;
+	position:relative;
+	left:0;
+    width: 75%;
+    height:9%;
+}
+
+.column2{
+    float:right;
+    width: 15%;
+    height:9%;
+    text-decoration:none;
+}
+
+.activity-name{
+    color:black;
+    font-weight: 900;
+	position:relative;
+    float:left;
+	left:20px;
+}
+
+.share-icon{
+
+    float:right;
+    height:5%;
+    width:auto;
+    right:0px;
+    background-size:cover; /*设置背景大小，使背景图像完全适应区域*/
+    background-repeat: repeat-x;  /*水平平铺*/
+
+}
+.share-text{
+    clear:both;
+    float:right;
+
+    height:5%;
+    width:auto;
+    color:black;
+}
+.o_share{
+    clear:none;
+}
+.font{
+    text-align:center;
+    color:#aaa;
+    font-size:20px;
+}
+.include{
+    color:black;
+    text-align:right;
+    font-size:15px;
+}
+.price{
+    text-align:left;
+    font-size:16px;
+    color:red;
+}
+
+.original-price{
+    line-height: 20px;
+    font-size: 14px;
+    color: #aaa;
+    text-decoration: line-through;
+}
+
+.center{
+    text-align:center;
+    margin：auto;
+}
+
+.left{
+    color: #aaa;
+    float:left;
+}
+
+.right{
+    color: #aaa;
+    float:right;
+}
+.join{
+    position:fixed;
+    width:50px;
+    height:50px;
+    border-radius:15px;
+    background-color:red;
+    color:white;
+    font-size:14px;
+    right:5%;
+    top:70%;
+
+}
+
+.address{
+    text-align:left;
+    background-color: #FFEBCD;
+    font-size:16px;
+}
+.bold-big{
+    font-weight:bolder;
+    font-size:20px;
+}
+/*
+li{
+    float:left;
+    display: block;
+    width:48%;
+    text-align: center;
+
+
+}
+li a{
+    text-decoration: none;
+    font-size:18px;
+    color:black;
+    font-weight:bold;
+}/*字体加粗*/
+/*
+li a:hover {
+    background-color: #F0F8FF;
+}
+/*鼠标移到会变色*/
+
+li {
+	display: inline-block;
+    margin: 0 10%;
+	height: 40px;
+	background: #FFFFFF;
+	/*border-bottom: 2px solid #8A2BE2;*/
+	font: 16px/40px "微软雅黑";
+	color: 	#A9A9A9;
+}
+
+li.current,
+li:hover {
+    border-bottom: 2px solid #8A2BE2;
+    color: black;
+}
+
+.hd {
+	height: 40px;
+	margin-bottom:10px;
+}
+
+.bd {
+	height: 400px;
+
+	font-size: 20px;
+}
+
+.bd>div {
+	display: none;
+}
+
+.bd .show {
+	display: block;
+}
+.gray{
+    background:	#A9A9A9;
+    height:30px;
+    padding:10px 0px;
+}
+.saled1{
+    float:left;
+    left:1%;
+    width:25%;
+    font-size: 15px;
+    height:30px;
+
+
+
+
+}
+.saled2{
+    float:left;
+    left:1%;
+    width:50%;
+    font-size: 15px;
+    height:30px;
+}
+
+.blank{
+    height:25%;
+}
+
+.contact{
+    font-size:18px;
+    text-align:center;
+    padding-top:4.5%;
+    float:left;
+    height:100%;
+    width:35%;
+    background-color: #ffffff;
+    text-decoration:none;
+}
+
+
+
+.buy{
+    font-size:18px;
+    color:white;
+    text-align:center;
+    padding-top:4.5%;
+    float:right;
+    height:100%;
+    width:65%;
+    background-color: #ff0036;
+    text-decoration:none;
+}
+
+.o_buynow{
+    font-size:18px;
+    color:white;
+    text-align:center;
+    padding-top:4.5%;
+    float:right;
+    height:100%;
+    width:65%;
+    background-color: #ff0036;
+    text-decoration:none;
+}
+
+
+
+
+.fixed{
+    position:fixed;
+
+    width:100%;
+    height:10%;
+    left:0px;
+    bottom:0px;
+    z-index:9999;
+}

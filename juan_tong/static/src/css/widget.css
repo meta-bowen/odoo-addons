@@ -1,0 +1,41 @@
+body{
+    text-align:center;
+    margin:auto;   /*水平居中一个元素或图片*/
+    width:auto;
+    height:auto;
+    overflow-y:auto;
+    overflow-x:hidden;
+}
+
+.share-icon{
+
+    float:right;
+    height:5%;
+    width:auto;
+    right:0px;
+    background-size:cover; /*设置背景大小，使背景图像完全适应区域*/
+    background-repeat: repeat-x;  /*水平平铺*/
+
+}
+
+
+.share-text{
+    clear:both;
+    float:right;
+
+    height:5%;
+    width:auto;
+    color:black;
+}
+
+.o_buynow{
+    font-size:18px;
+    color:white;
+    text-align:center;
+    padding-top:4.5%;
+    float:right;
+    height:100%;
+    width:65%;
+    background-color: #ff0036;
+    text-decoration:none;
+}

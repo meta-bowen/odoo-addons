@@ -1,0 +1,14 @@
+<?xml version="1.0"?>
+<odoo>
+	<act_window id="action_account"
+		name="账号管理"
+		res_model="res.users"
+		view_mode="tree,form"	
+	/>
+
+	
+	<menuitem id="menu_account"
+		action="action_account"
+		parent="menu_juantong" />
+		
+</odoo>

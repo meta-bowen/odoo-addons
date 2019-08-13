@@ -1,0 +1,13 @@
+<?xml version='1.0'?>
+<odoo>
+	<act_window id="action_juantong_activity"
+			name="活动管理"
+			res_model="activity"	
+			view_mode="tree,form"
+		/>
+	<menuitem id="menu_juantong_activity"
+			name="活动管理系统"
+			parent="menu_juantong"
+			action="action_juantong_activity"
+		/>
+</odoo>

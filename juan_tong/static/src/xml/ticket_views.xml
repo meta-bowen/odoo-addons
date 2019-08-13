@@ -1,0 +1,9 @@
+<template>
+    <t t-name="some.template">
+        <div>
+            <button class="o_juantong_get_token">In</button>
+        </div>
+    </t>
+
+
+</template>

@@ -1,0 +1,168 @@
+<?xml version="1.0"?>
+<odoo>
+
+    <template id="activity_assets" name="share_web_assets" inherit_id="web.assets_frontend">
+        <xpath expr="." position="inside">
+			<link rel="stylesheet" type="text/css"
+				  href="/juan_tong/static/src/css/code.css"/>
+			<script type="text/javascript"
+					src="/juan_tong/static/src/js/code.js"/>
+            <script type="text/javascript"
+                                src="/juan_tong/static/src/js/jiekou.js"/>
+            <script type="text/javascript"
+					src="/juan_tong/static/src/js/share.js"/>
+            <script type="text/javascript"
+					src="/juan_tong/static/src/js/buy.js"/>
+
+        </xpath>
+    </template>
+
+
+    <template id="activity_web" name="Activity">
+
+        <head>
+            <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
+            <meta name="format-detection" content="telephone=yes"/>
+            <t t-call-assets="web.assets_common" t-js="false"/>
+            <t t-call-assets="juan_tong.activity_assets" t-js="false"/>
+            <t t-call-assets="web.assets_common" t-css="false"/>
+            <t t-call-assets="juan_tong.activity_assets" t-css="false"/>
+
+        </head>
+
+        <body>
+            <div>
+                <div>
+                    <h2>微劵通卡券商城</h2>
+                   
+                    <t t-foreach="docs" t-as="doc">
+                        <img t-attf-src="/juan_tong/static/src/img/{{doc.name}}.png"/>
+                    </t>
+                </div>
+                <div class="main">
+                    <div>
+                        <t t-foreach="docs" t-as="doc">
+                            <span class="column1" t-field="doc.name" >
+                            </span>
+                        </t>
+                        <span class="o_share"></span>
+                        <!--button class="right" onclick="myFunction()">分享</button-->
+                        <!--a class="column2" href="https://www.baidu.com/">
+                            <img class="share-icon" t-att-src="'/juan_tong/static/src/img/timg.jpg'" alt="图片加载失败"/>
+                            <br/>
+                            <span class="share-text">分享</span>
+                        </a-->
+
+                    </div>
+
+                    <div class="font">
+                        <div class="price">
+                            <span class="include">包含</span>
+                            <br/>
+                            <span>￥</span>
+                            <t t-foreach="docs" t-as="doc">
+                                 <span t-field="doc.unit_price"/>
+                           	<span>&#160;&#160;&#160;&#160;</span>
+                           	 <span t-field="doc.discount"/>折
+                           	 <br/>
+                           	 <span class="original-price" t-field="doc.original_price">
+                               	 
+                           	 </span>
+			    </t>
+                        </div>
+                        <hr/>
+
+                        <span class="left">运费：免运费</span>
+                        <span>剩余：</span>
+                        <t t-foreach="docs" t-as="doc">
+                            <span t-field="doc.residue_copies"></span>
+                            <span class="right" t-field="doc.already_sales"></span>
+                        </t>
+                        <span class="right">销量：</span>
+                    </div>
+                    <div>
+			<t t-foreach="docs" t-as="doc">
+                        <a t-attf-href="tel:{{doc.name_id.contact_way}}">
+                            <button class="join">商家入驻</button>
+                        </a>
+			</t>
+                    </div>
+                   
+
+                    <div class="address">
+                        <t t-foreach="docs" t-as="doc">
+                            <span class="bold-big" t-field="doc.name_id"></span>
+
+                            <p>
+                                <span t-field="doc.name_id.id_country_id"/>
+                                <span t-field="doc.name_id.id_state_id"/>
+                                <span t-field="doc.name_id.id_city"/>
+                                <span t-field="doc.name_id.id_district"/>
+                            </p>
+
+                        </t>
+
+                    </div>
+
+                </div>
+              
+		<div>
+                    <div class="hd">
+                        <ul>
+                        <li class="current">商品详情</li>
+                        <t t-foreach="docs" t-as="doc">
+                            <li>本店成交(<span t-field="doc.already_sales"/>)</li>
+                        </t>
+                        </ul>
+                        <br/>
+                    </div>
+                    <div class="bd">
+
+                        <t t-foreach="docs" t-as="doc">
+                            <div class="show" t-field="doc.name"></div>
+                        </t>
+
+                        <div>
+                            <div class="gray">
+                                <span class="saled1">买家</span>
+                                <span class="saled2">购买时间</span>
+                                <span class="saled1">数量</span>
+                            </div>
+                            <div>
+                                <t t-foreach="orders" t-as="order">
+                                    <t t-foreach="docs" t-as="doc">
+                                        <t t-if="order.id_activity.name==doc.name">
+                                            <span class="saled1" t-field="order.username_addr"></span>
+                                            <span class="saled2" t-field="order.indent_time"></span>
+                                            <span class="saled1" t-field="order.number"></span>
+                                        </t>
+
+                                    </t>
+                                </t>
+                            </div>
+                        </div>
+                    </div>
+
+                </div>
+		
+                <div class="fixed">
+                    <t t-foreach="docs" t-as="doc">
+
+                        <a class="contact" t-attf-href="tel:{{doc.name_id.contact_way}}" role="button">联系商家</a>
+                        <a t-if="((doc.status=='1') or (doc.residue_copies == 0)) or (doc.date_now &gt; doc.end_time)" class="buy" role="button">
+                            活动已结束
+                        </a>
+                        <a t-elif="doc.date_now &lt; doc.start_time" class="buy" role="button">
+                            活动开始：<t t-esc="doc.start_time"/>
+                        </a>
+
+                        <span t-else="" class="o_buy"/>
+                     
+                    </t>
+                </div>
+            </div>
+        </body>
+
+    </template>
+
+</odoo>
