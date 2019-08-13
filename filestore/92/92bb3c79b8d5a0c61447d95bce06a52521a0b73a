@@ -1,0 +1,9 @@
+
+$o-user-theme-color-palette: map-merge($o-user-theme-color-palette, o-map-omit((
+    'alpha': #00a09d,
+    'beta': null,
+    'gamma': null,
+    'delta': null,
+    'epsilon': null,
+    // -- hook --
+)));
