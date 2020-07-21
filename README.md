@@ -68,7 +68,7 @@ ctrl + c
 > -i 表示装载模块
 
 
-# ####其他相关内容####
+# #其他相关内容#
 # Odoo配置
 > 详细odoo学习及配置教程[odoo12开发手册](https://alanhou.org/odoo-12-development/)
 
